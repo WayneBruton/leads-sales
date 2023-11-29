@@ -205,11 +205,11 @@ const open = () => {
   card.value = true;
 };
 
-const name = ref("Wayne");
-const surname = ref("Bruton");
-const email = ref("waynebruton@icloud.com");
-const contact = ref("0740628742");
-const development = ref("Heron View");
+const name = ref("");
+const surname = ref("");
+const email = ref("");
+const contact = ref("");
+const development = ref("");
 const contact_time = ref("ASAP");
 
 const reset = () => {
@@ -224,6 +224,22 @@ const reset = () => {
 // const sales_people = ref(["Morne", "Minette", "Yvette"]);
 
 const submit = async () => {
+  if (
+    name.value == "" ||
+    surname.value == "" ||
+    email.value == "" ||
+    contact.value == "" ||
+    development.value == ""
+  ) {
+    $q.notify({
+      message: `Please fill in all the fields.`,
+      color: "red",
+      position: "center",
+      icon: "warning",
+      timeout: 2000,
+    });
+    return;
+  }
   $q.loading.show({
     spinner: QSpinnerClock,
     spinnerSize: 100,
@@ -255,6 +271,7 @@ const submit = async () => {
         icon: "check",
         timeout: 2000,
       });
+      reset();
       $q.loading.hide();
       card.value = false;
     })

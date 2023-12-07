@@ -75,7 +75,7 @@
             </div>
             <div class="footer-contact">
               <q-icon name="local_phone" size="50px" />
-              <span class="footer-text">Office: (021) 919 9944</span>
+              <span class="footer-text">Office: (021) 300 0586</span>
             </div>
             <div class="footer-contact">
               <q-icon name="email" size="50px" />

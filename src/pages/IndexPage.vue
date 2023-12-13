@@ -1,95 +1,99 @@
 <template>
   <div>
     <q-page class="test" style="display: flex; flex-direction: column">
-      <div
-        class="test"
-        style="display: flex; width: 100%; justify-content: center; opacity: 0.9"
-      >
-        <img
-          class="header_img1"
-          src="~assets/Opportunity_Prop_Header.jpg"
-          style="width: 33%; height: 40%"
-        />
-        <!-- <img
-          class="header_img2"
-          src="~assets/Opportunity_Prop_Header.jpg"
-          style="width: 33%; height: 40%"
-        />
-        <img
-          class="header_img3"
-          src="~assets/Opportunity_Prop_Header.jpg"
-          style="width: 33%; height: 40%"
-        /> -->
-      </div>
-
-      <h4 class="welcome text-center" style="margin: 0px; font-weight: bold">
-        Thank you for your interest in one of our developments!
-      </h4>
-      <div class="development_divs_all">
-        <div class="development_divs">
-          <img src="~assets/hv.png" style="width: 35%" />
-          <img src="~assets/HV_Dev.jpg" style="width: 80%" />
-          <span style="font-weight: bold; font-size: 120%">HERON VIEW DEVELOPMENT</span>
-          <span style="font-size: 150%">Langeberg Ridge</span>
-        </div>
-        <div class="development_divs">
-          <img src="~assets/hf.png" style="width: 35%" />
-          <img src="~assets/HF_Dev.jpg" style="width: 80%" />
-          <span style="font-weight: bold; font-size: 120%">HERON FIELDS DEVELOPMENT</span>
-          <span style="font-size: 150%">Langeberg Ridge</span>
-        </div>
-        <div class="development_divs">
-          <img src="~assets/EN.png" style="width: 20%" />
-          <img src="~assets/EN_Dev.jpg" style="width: 80%" />
-          <span style="font-weight: bold; font-size: 120%">ENDULINI DEVELOPMENT</span>
-          <span style="font-size: 150%">Protea Heights</span>
-        </div>
-      </div>
-      <div style="margin: 0px 50px">
-        <h5 class="text-center">ALL COSTS INCLUDED (BOND & REGISTRATION COST)</h5>
-
-        <hr />
-      </div>
-
-      <div class="footer-main">
-        <div class="footer">
-          <span class="footer-text"
-            >Visit our website for more information on our other developments:</span
+      <div class="row">
+        <div class="col-1" style="background-color: #dedbc9"></div>
+        <div class="col">
+          <div
+            class="test"
+            style="display: flex; width: 100%; justify-content: center; opacity: 0.9"
           >
-        </div>
-        <div class="footer">
-          <div class="footer-content-left">
-            <div class="footer-contact">
-              <q-icon name="computer" size="50px" />
-              <span
-                class="footer-text"
-                style="color: blue; cursor: pointer; text-decoration: underline"
-                ><a href="http://www.opportunityprop.co.za"
-                  >www.opportunityprop.co.za</a
-                ></span
+            <!-- src="~assets/Opportunity_Prop_Header.jpg" -->
+            <img
+              class="header_img1"
+              src="~assets/lsales-ogo-1.png"
+              style="width: 33%; height: 40%"
+            />
+          </div>
+
+          <h4 class="welcome text-center" style="margin: 0px; font-weight: bold">
+            Thank you for your interest in one of our developments!
+          </h4>
+          <div class="development_divs_all">
+            <div class="development_divs">
+              <img src="~assets/hv.png" style="width: 35%" />
+              <img src="~assets/HV_Dev.jpg" style="width: 80%" />
+              <span style="font-weight: bold; font-size: 120%"
+                >HERON VIEW DEVELOPMENT</span
               >
+              <span style="font-size: 150%">Langeberg Ridge</span>
             </div>
-            <div class="footer-contact">
-              <q-icon name="smartphone" size="50px" />
-              <span class="footer-text">Mobile: (066) 057 2220</span>
+            <div class="development_divs">
+              <img src="~assets/hf.png" style="width: 35%" />
+              <img src="~assets/HF_Dev.jpg" style="width: 80%" />
+              <span style="font-weight: bold; font-size: 120%"
+                >HERON FIELDS DEVELOPMENT</span
+              >
+              <span style="font-size: 150%">Langeberg Ridge</span>
             </div>
-            <div class="footer-contact">
-              <q-icon name="local_phone" size="50px" />
-              <span class="footer-text">Office: (021) 300 0586</span>
+            <div class="development_divs">
+              <img src="~assets/EN.png" style="width: 20%" />
+              <img src="~assets/EN_Dev.jpg" style="width: 80%" />
+              <span style="font-weight: bold; font-size: 120%">ENDULINI DEVELOPMENT</span>
+              <span style="font-size: 150%">Protea Heights</span>
             </div>
-            <div class="footer-contact">
-              <q-icon name="email" size="50px" />
+          </div>
+          <div style="margin: 0px 50px">
+            <h5 class="text-center">
+              ALL COSTS INCLUDED: (TRANSFER & BOND REGISTRATION COSTS)
+            </h5>
+
+            <hr />
+          </div>
+
+          <div class="footer-main">
+            <div class="footer">
               <span class="footer-text"
-                >Email:
-                <span style="color: blue; cursor: pointer"
-                  ><a href="mailTo: info@opportunityprop.co.za"
-                    >info@opportunityprop.co.za</a
-                  ></span
-                ></span
+                >Visit our website for more information on these developments or give us a
+                call:</span
               >
+            </div>
+            <div class="footer">
+              <div class="footer-content-left">
+                <div class="footer-contact">
+                  <q-icon name="computer" size="50px" />
+                  <span
+                    class="footer-text"
+                    style="color: blue; cursor: pointer; text-decoration: underline"
+                    ><a href="http://www.opportunityprop.co.za"
+                      >www.opportunityprop.co.za</a
+                    ></span
+                  >
+                </div>
+                <div class="footer-contact">
+                  <q-icon name="smartphone" size="50px" />
+                  <span class="footer-text">Mobile: (066) 057 2220</span>
+                </div>
+                <div class="footer-contact">
+                  <q-icon name="local_phone" size="50px" />
+                  <span class="footer-text">Office: (021) 300 0586</span>
+                </div>
+                <div class="footer-contact">
+                  <q-icon name="email" size="50px" />
+                  <span class="footer-text"
+                    >Email:
+                    <span style="color: blue; cursor: pointer"
+                      ><a href="mailTo: info@opportunityprop.co.za"
+                        >info@opportunityprop.co.za</a
+                      ></span
+                    ></span
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="col-1" style="background-color: #dedbc9"></div>
       </div>
       <q-dialog v-model="card" persistent>
         <q-card
@@ -187,7 +191,7 @@ if (process.env.DEV) {
   url.value = "https://omh-python.herokuapp.com";
 }
 
-const options = ["Endulini", "Heron Fields", "Heron View"];
+const options = ["Endulini", "Heron Fields", "Heron View", "All of the Above"];
 
 // const position = ref("left");
 
@@ -303,7 +307,7 @@ open();
 }
 .development_divs_all {
   display: flex;
-  width: 100vw;
+  width: 83vw;
   margin: 10px;
   justify-content: space-around;
 }

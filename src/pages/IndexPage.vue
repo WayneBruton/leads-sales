@@ -128,6 +128,7 @@
               label="Contact Number"
               style="margin: 5px"
               mask="(###) ### ####"
+              hint="Please do not include contry code. Start with 0##."
               type="tel"
             />
             <q-select
@@ -172,7 +173,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted, computed, onBeforeMount } from "vue";
 // import { useUserStore } from "../stores/userStore";
 import { useQuasar, QSpinnerClock } from "quasar";
 import dayjs from "dayjs";
@@ -193,8 +194,38 @@ if (process.env.DEV) {
 
 const options = ["Endulini", "Heron Fields", "Heron View", "All of the Above"];
 
-// const position = ref("left");
+onMounted(() => {
+  // Facebook Pixel script
+  !(function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = "2.0";
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+  fbq("init", "1433806687398157");
+  fbq("track", "PageView");
+  // console.log("Facebook Pixel script loaded");
+});
 
+// const position = ref("left");
+// onMounted(() => {
+//   console.log(route);
+//   if (route.query == {}) {
+//     // redirect back to where they came from
+//     reset();
+//     card.value = false;
+//   }
+// });
 // const metaData = {
 //   // sets document title
 //   title: "Opportunity",
@@ -206,8 +237,14 @@ const card = ref(false);
 
 const open = () => {
   // position.value = "bottom";
-  card.value = true;
+  if (route.query.source) {
+    card.value = true;
+  } else {
+    card.value = false;
+  }
 };
+
+// Object.keys(route.params).length > 0;
 
 const name = ref("");
 const surname = ref("");
@@ -228,6 +265,12 @@ const reset = () => {
 // const sales_people = ref(["Morne", "Minette", "Yvette"]);
 
 const submit = async () => {
+  if (route.query == {}) {
+    // redirect back to where they came from
+    reset();
+    card.value = false;
+    return;
+  }
   if (
     name.value == "" ||
     surname.value == "" ||
